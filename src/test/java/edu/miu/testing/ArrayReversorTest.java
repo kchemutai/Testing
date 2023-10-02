@@ -36,6 +36,7 @@ class ArrayReversorTest {
         int[] actual=arrayReversor.reverseArray(input);
 
         Assertions.assertArrayEquals(expected, actual);
+        Mockito.verify(arrayFlattenerService).flattenArray(input);
     }
 
     @Test
